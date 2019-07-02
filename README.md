@@ -27,9 +27,11 @@ Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-s
 ### dataFrame
 * The class can be initilized on a .csv file or a given dictionary
 * The structure of the dictionary  
+<pre>
     df_eq = {'col1' : [list, of, column, data],  
              'col2' : [list, of, column, data],  
               ...,  
            'coln-1' : [list, of, column, data],  
              'coln' : [list, of, column, data]}  
+</pre>
 * 
