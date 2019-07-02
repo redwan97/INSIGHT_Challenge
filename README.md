@@ -5,8 +5,8 @@
 1. [Summary](README.md#summary)
 1. [Instructions](README.md#instructions)
 1. [Classes](README.md#classes)
-1. [Class dataFrame](README.md#dataFrame)
-1. [Class Analytics](README.md#analytics)
+1. [Class dataFrame](README.md#*-dataFrame)
+1. [Class Analytics](README.md#*-analytics)
 
 <br>
 
