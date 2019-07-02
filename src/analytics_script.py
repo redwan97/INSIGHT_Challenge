@@ -6,7 +6,7 @@ import os.path
 base = os.path.dirname(os.path.dirname(__file__))
 print(base)
 
-def main():
+if __name__ == '__main__':
     outputCol = ['department_id', 'number_of_orders', 'number_of_first_orders', 'percentage']
     csvList = ['products.csv', 'order_products.csv']
     analysis1 = Analytics(csvList)
@@ -17,6 +17,6 @@ def main():
 
     keys = resultDict.keys()
     outputFileName = 'report.csv'
+    df_result.printFrame()
     df_result.frameToCsv(outputCol, keys, outputFileName)
    
-main()

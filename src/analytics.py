@@ -10,6 +10,7 @@ class Analytics():
             self.dfDict[file] = dataFrame(os.path.join(base, 'input', file))
 
     def productOrderAnalysis(self, outputCol):
+        print("Processing product + order analysis ... ")
         try:
             df_products = self.dfDict['products.csv']
             df_orders = self.dfDict['order_products.csv']

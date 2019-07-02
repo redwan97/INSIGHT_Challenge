@@ -10,7 +10,6 @@ class dataFrame():
             with open(fileName, 'r', encoding = 'utf8') as readFile:
                 firstLine = True
                 for line in readFile:
-                    print(line)
                     if firstLine:
                         columns = line.strip('\n').split(',')
                         for col in columns:
@@ -38,8 +37,10 @@ class dataFrame():
                             if '"' in value: value = save
                             self.df[columns[i]].append(value)
                             i+=1
+            print("Finished creating dataFrame from: {}".format(fileName))
         else:
             self.df = orginDict
+            print("Finished creating dataFrame from provided dictionary.")
 
     def __getitem__(self, col):
         return self.df[col]
