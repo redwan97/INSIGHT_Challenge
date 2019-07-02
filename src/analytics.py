@@ -5,14 +5,14 @@ base = os.path.dirname(os.path.dirname(__file__))
 
 class Analytics():
     def __init__(self, csvList):
-        self.dfDict = {}
+        self.dictOfInputDataFrames = {}
         for file in csvList:
-            self.dfDict[file] = dataFrame(os.path.join(base, 'input', file))
+            self.dictOfInputDataFrames[file] = dataFrame(os.path.join(base, 'input', file))
 
     def productOrderAnalysis(self, outputCols):
         try:
-            df_products = self.dfDict['products.csv']
-            df_orders = self.dfDict['order_products.csv']
+            df_products = self.dictOfInputDataFrames['products.csv']
+            df_orders = self.dictOfInputDataFrames['order_products.csv']
             #df_products.printFrame()
             #df_orders.printFrame()
         except KeyError:
@@ -25,8 +25,8 @@ class Analytics():
             reordered = int(df_orders['reordered'][index])
             departmentName = df_products['department_id'][df_products.getIndex('product_id', val)]    
             if departmentName in processDict:
-                processDict[departmentName][0] +=1
-                if reordered == 0: processDict[departmentName][1] +=1
+                processDict[departmentName][0] += 1
+                if reordered == 0: processDict[departmentName][1] += 1
             else:
                 processDict[departmentName] = [1]
                 if reordered == 0: processDict[departmentName].append(1)

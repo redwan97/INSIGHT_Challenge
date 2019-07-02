@@ -6,7 +6,6 @@ Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-s
 
 
 ## Summary
-
 * The challenge forbade usages of libraries like pandas.
 * As a result, I decided to create my own dataframe data structure.
 * The dataStructure allows easy storage and quering of the .csv input files.
@@ -17,7 +16,6 @@ Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-s
 * While I did some unit testing along the way, I have not added the incomplete unit tests to this repo as of now.
 * I only had access to a Windows machine throughout the duration of the challenge.
 * While the code should be OS independent, I am not 100% sure the shell script (run.sh) works.
- 
 
 ## Instructions to execute program
 * Use the run.sh to run the python script.
@@ -26,6 +24,12 @@ Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-s
 * On average the program takes 15 minutes to complete the analysis on order_products.csv and products.csv
 
 ## Classes
-# dataFrame
-**
-**
+### dataFrame
+* The class can be initilized on a .csv file or a given dictionary
+* The structure of the dictionary 
+    df_eq = {'col1' : [list, of, column, data],
+             'col2' : [list, of, column, data],
+              ...,
+           'coln-1' : [list, of, column, data],
+             'coln' : [list, of, column, data]}
+* 

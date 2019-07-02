@@ -36,7 +36,7 @@ class dataFrame():
                         for value in vals:
                             if '"' in value: value = save
                             self.df[columns[i]].append(value)
-                            i+=1
+                            i += 1
             print("Finished creating dataFrame from: {}".format(fileName))
         else:
             self.df = orginDict
@@ -48,7 +48,7 @@ class dataFrame():
     def getIndex(self, col, x):
         return self.df[col].index(x)
 
-    def printFrame(self):
+    def printFrame(self, lineLimit = 999999999999):
         print('\n\t\t\t*** Printing DataFrame ****')
 
         for col in self.df:
@@ -56,10 +56,9 @@ class dataFrame():
         print('')
         rows = len(next(iter(self.df.values()))) 
 
-        #count = 0 
+        count = 0 
         for row in range(rows):
-            #count+=1
-            #if count > 10: break
+            if count > lineLimit: break
             for col in self.df:
                 val = self.df[col][row]
                 col = str(col)
@@ -69,6 +68,7 @@ class dataFrame():
                     val = val[0:sub] + '...'     
                 print("{:<20}".format(val), end = '')
             print('')
+            count += 1
         print('')
 
     def frameToCsv(self, colOrder, fileName, delm = ','):
