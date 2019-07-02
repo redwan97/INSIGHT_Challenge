@@ -37,8 +37,6 @@ Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-s
 <br>
 
 ## Classes
-<br>
-
 ### * dataFrame Class
 * The class can be initilized on a .csv file or a given dictionary:
 <pre>
