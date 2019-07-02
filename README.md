@@ -38,8 +38,9 @@ Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-s
 <br>
 
 ## Classes
->> dataFrame class
->> Analytics class
+### 
+* dataFrame class
+* Analytics class
 <br>
 
 ### dataFrame
@@ -109,7 +110,6 @@ Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-s
     Successfully saved output to file: fileName
 
 </pre>
-<br>
 
 ### Analytics
 * Initilize the analytics class by passing a list of input files.
