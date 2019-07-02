@@ -1,4 +1,15 @@
 # INSIGHT_Challenge
+
+## Table of Contents
+1. [Problem](README.md#problem)
+1. [Summary](README.md#summary)
+1. [Instructions](README.md#instructions)
+1. [Classes](README.md#classes)
+1. [Class dataFrame](README.md#dataFrame)
+1. [Class Analytics](README.md#analytics)
+
+
+
 ## Problem
 Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-shopping-2017) containing 3 million Instacart orders.  
 **"For this challenge, we want you to calculate, for each department, the number of times a product was requested, number of times a product was requested for the first time and a ratio of those two numbers."**
@@ -18,7 +29,7 @@ Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-s
 * While the code should be OS independent, I am not 100% sure the shell script (run.sh) works.
 <br>
 
-## Instructions to execute program
+## Instructions
 * Use the run.sh to run the python script.
 * If the shell script does not work, please navigate to the src directory and manually run the analytics_script.py script.
 * The program will save the output as report.csv in the output directory.
