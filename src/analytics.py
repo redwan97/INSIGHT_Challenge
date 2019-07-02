@@ -48,5 +48,5 @@ class Analytics():
         resultDict['percentage'] = ['%.2f' % float(x/y) for x, y in zip(a, b)]
         #print(resultDict)
 
-        print("Finished conducting analysis on products and orders.".format())
+        print("Finished conducting analysis on products and orders.")
         return resultDict

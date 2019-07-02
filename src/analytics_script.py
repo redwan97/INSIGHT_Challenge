@@ -11,10 +11,11 @@ if __name__ == '__main__':
     outputCols = ['department_id', 'number_of_orders', 'number_of_first_orders', 'percentage']
     csvList = ['products.csv', 'order_products.csv']
     
-    analysis1 = Analytics(csvList)
-    resultDict = analysis1.productOrderAnalysis(outputCols)
+    analyticsObj = Analytics(csvList)
+    analysisDict = analyticsObj.productOrderAnalysis(outputCols)
 
-    df_result = dataFrame(None, resultDict)
-    #df_result.printFrame()
+    df_result = dataFrame(None, analysisDict)
+    df_result.printFrame()
     df_result.toCsv(outputCols, outputFileName)
+    
    
