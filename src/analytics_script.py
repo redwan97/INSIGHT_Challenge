@@ -13,8 +13,8 @@ if __name__ == '__main__':
     
     analysis1 = Analytics(csvList)
     resultDict = analysis1.productOrderAnalysis(outputCols)
-    
+
     df_result = dataFrame(None, resultDict)
-    df_result.printFrame()
-    df_result.frameToCsv(outputCols, outputFileName)
+    #df_result.printFrame()
+    df_result.toCsv(outputCols, outputFileName)
    

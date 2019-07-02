@@ -48,17 +48,17 @@ class dataFrame():
     def getIndex(self, col, x):
         return self.df[col].index(x)
 
-    def printFrame(self, lineLimit = 999999999999):
+    def printFrame(self, rowLimit = -1):
         print('\n\t\t\t*** Printing DataFrame ****')
 
         for col in self.df:
-            print("{:<20}".format(col), end = '')
+            print("{:<25}".format(col), end = '')
         print('')
         rows = len(next(iter(self.df.values()))) 
-
+        if rowLimit == -1: rowLimit = rows
         count = 0 
         for row in range(rows):
-            if count > lineLimit: break
+            if count == rowLimit: break
             for col in self.df:
                 val = self.df[col][row]
                 col = str(col)
@@ -66,12 +66,12 @@ class dataFrame():
                 if not (len(val) < len(col)):
                     sub = len(col) - 2
                     val = val[0:sub] + '...'     
-                print("{:<20}".format(val), end = '')
+                print("{:<25}".format(val), end = '')
             print('')
             count += 1
         print('')
 
-    def frameToCsv(self, colOrder, fileName, delm = ','):
+    def toCsv(self, colOrder, fileName, delm = ','):
         resultDict = self.df
         fileName = os.path.join(base, 'output', fileName)
         with open(fileName, 'w', newline='') as outfile:

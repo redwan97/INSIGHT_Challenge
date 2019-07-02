@@ -13,8 +13,8 @@ class Analytics():
         try:
             df_products = self.dictOfInputDataFrames['products.csv']
             df_orders = self.dictOfInputDataFrames['order_products.csv']
-            #df_products.printFrame()
-            #df_orders.printFrame()
+            #df_products.printFrame(10)
+            #df_orders.printFrame(10)
         except KeyError:
             print("Failed to conduct analysis on products and orders. File not found!")
         

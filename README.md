@@ -26,7 +26,15 @@ Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-s
 ## Classes
 ### dataFrame
 * The class can be initilized on a .csv file or a given dictionary
-* The structure of the dictionary  
+<pre>
+    class DataFrame():
+        ...
+
+    >> someDict = { 'a':[1,2], 'b':[3,4] }
+    >> df_from_file = dataFrame('example.csv')
+    >> df_from_dict = dataFrame(someDict)
+</pre>
+* The class has a dictionary member variable and its structure in relation to "table" in .csv:
 <pre>
     df_eq = {'col1' : [list, of, column, data],  
              'col2' : [list, of, column, data],  
@@ -34,4 +42,53 @@ Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-s
            'coln-1' : [list, of, column, data],  
              'coln' : [list, of, column, data]}  
 </pre>
-* 
+* The dataFrame object has the []-operator defined as follows: 
+<pre>
+    def __getitem__(self, col):
+        return self.df[col]
+
+    >> someDict = { 'a':[1,2], 'b':[3,4] }
+    >> df = dataFrame(someDict)
+    >> print (df['a'])
+    [1,2]    
+</pre>
+* To get the index of element x in a column:
+<pre>
+    def getIndex(self, col, x):
+        return self.df[col].index(x)
+
+    >> someDict = { 'a':[1,2,4,5], 'b':[3,4,9,4] }
+    >> df = dataFrame(someDict)
+    >> print (df.getIndex('a',4))
+    2
+</pre>
+* To pretty-print the dataFrame:
+<pre>
+    def printFrame(self, rowLimit = -1):
+        ...
+
+    >> someDict = { 'a':[1,2,4,5], 'b':[3,4,9,4] }
+    >> someDict.printFrame(2)
+    a       b
+    1       3
+    2       4
+    >> someDict.printFrame
+    a       b
+    1       3
+    2       4
+    4       9
+    5       4
+</pre>
+* To save the dataFrame into a csv:
+<pre>
+    def toCsv(self, colOrder, fileName, delm = ','):
+        ...
+   
+    >> someDict = { 'a':[1,2,4,5], 'b':[3,4,9,4] }
+    >> colOrder = sorted(someDict.keys())
+    >> df = dataFrame(someDict)
+    >> df.toCsv(colOrder, fileName)
+    Successfully saved output to file: fileName
+
+</pre>
+    
