@@ -22,6 +22,9 @@ Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-s
 * If the shell script does not work, please navigate to the src directory and manually run the analytics_script.py script.
 * The program will save the output as report.csv in the output directory.
 * On average the program takes 15 minutes to complete the analysis on order_products.csv and products.csv
+  
+<br>
+<br>
 
 ## Classes
 ### dataFrame
