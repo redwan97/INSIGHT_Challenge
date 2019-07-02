@@ -50,32 +50,33 @@ class dataFrame():
 
     def printFrame(self):
         print('\n\t\t\t*** Printing DataFrame ****')
+
         for col in self.df:
-            print(col + '\t', end = '')
+            print("{:<20}".format(col), end = '')
         print('')
-        rows = len(next(iter(self.df.values())))  
-        print(rows)    
+        rows = len(next(iter(self.df.values()))) 
+
+        #count = 0 
         for row in range(rows):
+            #count+=1
+            #if count > 10: break
             for col in self.df:
                 val = self.df[col][row]
                 col = str(col)
                 val = str(val)
-                if(len(val) < len(col)):
-                    numTabs = math.ceil((len(col) - len(val)) / 4) 
-                else:
+                if not (len(val) < len(col)):
                     sub = len(col) - 2
-                    val = val[0:sub] + '...'
-                    numTabs = 1
-                print(val + numTabs*'\t', end = '')
+                    val = val[0:sub] + '...'     
+                print("{:<20}".format(val), end = '')
             print('')
         print('')
 
-    def frameToCsv(self, colOrder, keys , fileName, delm = ','):
+    def frameToCsv(self, colOrder, fileName, delm = ','):
         resultDict = self.df
         fileName = os.path.join(base, 'output', fileName)
         with open(fileName, 'w', newline='') as outfile:
             writer = csv.writer(outfile, delimiter = delm)
-            writer.writerow(keys)
+            writer.writerow(colOrder)
             
             rows = len(next(iter(resultDict.values())))  
             for listIndex in range(rows): 

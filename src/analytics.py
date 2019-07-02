@@ -9,8 +9,7 @@ class Analytics():
         for file in csvList:
             self.dfDict[file] = dataFrame(os.path.join(base, 'input', file))
 
-    def productOrderAnalysis(self, outputCol):
-        print("Processing product + order analysis ... ")
+    def productOrderAnalysis(self, outputCols):
         try:
             df_products = self.dfDict['products.csv']
             df_orders = self.dfDict['order_products.csv']
@@ -18,7 +17,8 @@ class Analytics():
             #df_orders.printFrame()
         except KeyError:
             print("Failed to conduct analysis on products and orders. File not found!")
-
+        
+        print("Processing product + order analysis ... ")
         processDict = {}
         orders = df_orders['product_id']
         for index,val in enumerate(orders):
@@ -33,7 +33,7 @@ class Analytics():
                 else: processDict[departmentName].append(0)
         
         resultDict = {}
-        for col in outputCol:
+        for col in outputCols:
             resultDict[col] = []
         
         sortedLst = sorted([ int(keyStr) for keyStr in list(processDict.keys())])       # get list of dict keys, int cast, then sort
