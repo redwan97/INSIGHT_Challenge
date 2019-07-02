@@ -37,11 +37,9 @@ Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-s
 <br>
 
 ## Classes
-### * dataFrame class
-### * Analytics class
 <br>
 
-### dataFrame
+### * dataFrame Class
 * The class can be initilized on a .csv file or a given dictionary:
 <pre>
     class DataFrame():
@@ -109,7 +107,7 @@ Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-s
 
 </pre>
 
-### Analytics
+### * Analytics Class
 * Initilize the analytics class by passing a list of input files.
 * Internally the class creates a dicitonary of dataFrames on fileName as key.
 * To conduct analysis, first add the analysis process as a member function.
