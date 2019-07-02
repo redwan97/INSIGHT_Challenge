@@ -55,7 +55,7 @@ Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-s
             'coln-1' : [list, of, column, data],  
               'coln' : [list, of, column, data] }  
 </pre>
-* The dataFrame object has the []-operator defined as follows: 
+* The dataFrame object has the []-operator defined so that values in the form of a list is returned on key lookup
 <pre>
     def __getitem__(self, col):
         return self.df[col]
