@@ -1,9 +1,8 @@
 # INSIGHT_Challenge
-<br>
-
 ## Problem
 Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-shopping-2017) containing 3 million Instacart orders.  
 **"For this challenge, we want you to calculate, for each department, the number of times a product was requested, number of times a product was requested for the first time and a ratio of those two numbers."**
+<br>
 <br>
 
 ## Summary
@@ -100,7 +99,9 @@ Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-s
 * Initilize the analytics class by passing a list of input files.
 * Internally the class creates a dicitonary of dataFrames on fileName as key.
 * To conduct analysis, first add the analysis process as a member function.
-* Then call any pre-defined analysis.
+* Then call any pre-defined analysis. Analysis should return a dictionary.
+* A message indicating status of analysis will be printed to console. 
+* To output analysis into a csv, convert dictionary to dataFrame, and call .toCsv method
 <pre>
     def __init__(self, csvList):
         self.dictOfInputDataFrames = {}
@@ -110,5 +111,6 @@ Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-s
     >> csvList = ['input1.csv','input2.csv']
     >> analyticsObj = Analytics(csvList)
     >> analysisDict = analyticsObj.productOrderAnalysis(outputCols)
+    "Finished conducting analysis on ...... "
 
 </pre>
