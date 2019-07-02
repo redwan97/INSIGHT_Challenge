@@ -8,7 +8,8 @@
 1. [Class dataFrame](README.md#dataFrame)
 1. [Class Analytics](README.md#analytics)
 
-
+<br>
+<br>
 
 ## Problem
 Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-shopping-2017) containing 3 million Instacart orders.  
@@ -37,6 +38,10 @@ Instacart has published a [dataset](https://www.instacart.com/datasets/grocery-s
 <br>
 
 ## Classes
+>> dataFrame class
+>> Analytics class
+<br>
+
 ### dataFrame
 * The class can be initilized on a .csv file or a given dictionary:
 <pre>
